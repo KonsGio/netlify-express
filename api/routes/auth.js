@@ -9,7 +9,7 @@ router.get("/", (req, res) => {
 
 // http://localhost:8800/auth/register
 router.get("/register", (req, res) => {
-    res.send("Hello, this is registration endpoint")
+    res.send("Hello, this is registration endpoint!")
 })
 
 
