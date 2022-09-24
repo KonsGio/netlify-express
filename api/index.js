@@ -35,7 +35,11 @@ const connect = async () => {
   app.use("/api/hotels", hotelsRoute);
   app.use("/api/rooms", roomsRoute);
 
+  // another middleware 
   
+  app.use((req,res,next) => {
+    console.log('I am a middleware');
+  })
 
 app.listen(8800, () => {
     connect()
