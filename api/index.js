@@ -30,15 +30,21 @@ const connect = async () => {
   // middlewares handling req, res before showing to us
 
   app.use(express.json())
+
   app.use("/api/auth", authRoute);
   app.use("/api/users", usersRoute);
   app.use("/api/hotels", hotelsRoute);
   app.use("/api/rooms", roomsRoute);
 
-  // another middleware 
+  // // another middleware 
   
-  app.use((req,res,next) => {
-    console.log('I am a middleware');
+  // app.use((req,res,next) => {
+  //   console.log('I am a middleware');
+  // })
+
+  // Error handling
+    app.use((err,req,res,next) => {
+    return res.status(500).json("Error from handler")
   })
 
 app.listen(8800, () => {
