@@ -23,14 +23,9 @@ const connect = async () => {
     console.log("mongoDB disconnected!");
   });
 
-  mongoose.connection.on("connected", () => {
-    console.log("mongoDB connected!");
-  });
-   
-  
   // middlewares handling req, res before showing to us
 
-  app.use(cookieParser);
+  app.use(cookieParser());
   app.use(express.json());
 
   app.use("/api/auth", authRoute);
