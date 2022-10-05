@@ -20,7 +20,7 @@ const connect = async () => {
   };
 
   mongoose.connection.on("disconnected", () => {
-    console.log("mongoDB disconnected!");
+    console.log("mongoDB disconnected!!");
   });
 
   // middlewares handling req, res before showing to us
