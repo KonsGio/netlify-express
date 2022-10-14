@@ -21,7 +21,7 @@ const RoomSchema = new mongoose.Schema(
       type: [String],
     },
     hotelId: {
-      type: String,
+      type: [String],
     },
     roomNumbers: [{ number: Number, unavailableDates: {type: [Date]}}],
   },
