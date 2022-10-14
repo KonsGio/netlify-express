@@ -20,7 +20,7 @@ const RoomSchema = new mongoose.Schema(
     roomphoto: {
       type: [String],
     },
-    hotelId: {
+    hotel: {
       type: [String],
     },
     roomNumbers: [{ number: Number, unavailableDates: {type: [Date]}}],
