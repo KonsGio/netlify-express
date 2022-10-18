@@ -17,15 +17,10 @@ const RoomSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
-    roomphoto: {
-      type: [String],
-    },
-    hotel: {
-      type: [String],
-    },
+
     roomNumbers: [{ number: Number, unavailableDates: {type: [Date]}}],
   },
-  { timestamps: true }
+  { timestamps: false }
 );
 
 export default mongoose.model("Room", RoomSchema);
