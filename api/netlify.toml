@@ -2,6 +2,6 @@
     functions="functions"
 
 [[redirects]]
-    to="/.netlify/functions/api:splat"
+    to="https://booking-app-api.netlify.app/.netlify/functions/api"
     from="/*"
     status=200 
